@@ -4,7 +4,7 @@ using System.Linq;
 namespace ShiftAllocation {
     public static class Allocator {
         public static IList<Van> Allocate( IEnumerable<Shift> shifts ) {
-            shifts = shifts.OrderBy( s => s.End ).ThenBy( s => s.Start );
+            shifts = shifts.OrderBy( s => s.Start ).ThenBy( s => s.End );
 
             IList<Van> vans = new List<Van>();
 
